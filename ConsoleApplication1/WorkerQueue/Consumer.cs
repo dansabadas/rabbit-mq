@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace RabbitMQ.Examples
 {
-    public class ConsumerProgram
+    public class Consumer
     {
         private static ConnectionFactory _factory;
         private static IConnection _connection;

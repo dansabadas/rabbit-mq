@@ -57,9 +57,11 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Common\PurchaseOrder.cs" />
+    <Compile Include="PublishSubscribe\Subscriber.cs" />
+    <Compile Include="PublishSubscribe\Publisher.cs" />
     <Compile Include="StandardQueue\MainStandardQueue.cs" />
-    <Compile Include="WorkerQueue\Consumer\ProgramConsumer.cs" />
-    <Compile Include="WorkerQueue\Producer\ProducerProgram.cs" />
+    <Compile Include="WorkerQueue\Consumer.cs" />
+    <Compile Include="WorkerQueue\Producer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -67,7 +69,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DirectRouting\" />
-    <Folder Include="PublishSubscribe\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,19 +1,21 @@
-﻿using System;
+﻿
+
+using System;
 using RabbitMQ.Client;
 using ConsoleApplication1.Common;
 
 namespace RabbitMQ.Examples
 {
-    public class ProducerProgram
+    public class Publisher
     {
         private static ConnectionFactory _factory;
         private static IConnection _connection;
         private static IModel _model;
-        
-        private const string QueueName = "WorkerQueue_Queue";
+
+        private const string ExchangeName = "PublishSubscribe_Exchange";
 
         public static void Run()
-        {            
+        {
             var payment1 = new Payment { AmountToPay = 25.0m, CardNumber = "1234123412341234" };
             var payment2 = new Payment { AmountToPay = 5.0m, CardNumber = "1234123412341234" };
             var payment3 = new Payment { AmountToPay = 2.0m, CardNumber = "1234123412341234" };
@@ -24,9 +26,9 @@ namespace RabbitMQ.Examples
             var payment8 = new Payment { AmountToPay = 5625.0m, CardNumber = "1234123412341234" };
             var payment9 = new Payment { AmountToPay = 5.0m, CardNumber = "1234123412341234" };
             var payment10 = new Payment { AmountToPay = 12.0m, CardNumber = "1234123412341234" };
-            
+
             CreateConnection();
-            
+
             SendMessage(payment1);
             SendMessage(payment2);
             SendMessage(payment3);
@@ -46,14 +48,13 @@ namespace RabbitMQ.Examples
             _factory = RabbitMQConnectionFactory.GetFactory(isRemote: false);
             _connection = _factory.CreateConnection();
             _model = _connection.CreateModel();
-            
-            _model.QueueDeclare(QueueName, true, false, false, null);
+            _model.ExchangeDeclare(ExchangeName, "fanout", false);
         }
 
         private static void SendMessage(Payment message)
-        {                        
-            _model.BasicPublish("", QueueName, null, message.Serialize());
-            Console.WriteLine(" Payment Sent {0}, £{1}", message.CardNumber, message.AmountToPay);                
+        {           
+            _model.BasicPublish(ExchangeName, "", null, message.Serialize());
+            Console.WriteLine(" Payment Sent {0}, £{1}", message.CardNumber, message.AmountToPay);             
         }
     }
 }

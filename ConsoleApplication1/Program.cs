@@ -10,9 +10,12 @@ namespace ConsoleApplication1
         static void Main(string[] args)
         {
             //MainStandardQueue.Run();
-            //ProducerProgram.Run();
 
-            ConsumerProgram.RunInParallel();
+            //ProducerProgram.Run();
+            //Consumer.RunInParallel();
+
+            Subscriber.RunInParallel();
+            Publisher.Run();
         }
     }
 }
