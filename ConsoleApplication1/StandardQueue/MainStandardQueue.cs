@@ -2,6 +2,7 @@
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 using RabbitMQ.Examples;
+using ConsoleApplication1.Common;
 
 namespace ConsoleApplication1.StandardQueue
 {
@@ -46,13 +47,7 @@ namespace ConsoleApplication1.StandardQueue
 
         private static void CreateQueue()
         {
-            _factory = new ConnectionFactory
-            {
-                HostName = "localhost", // localhost lark.rmq.cloudamqp.com
-                //VirtualHost = "",   // uatqkgsm  (remote rabbitMQ server manadatory requires VirtualHost!)
-                UserName = "guest", // guest uatqkgsm
-                Password = "guest", // guest JilDhdpIdi8ug2sd2Jh23ZuL6rETlZ_w
-            };
+            _factory = RabbitMQConnectionFactory.GetFactory(isRemote: false);
             _connection = _factory.CreateConnection();
             _model = _connection.CreateModel();
 

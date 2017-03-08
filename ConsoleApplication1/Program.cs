@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using ConsoleApplication1.StandardQueue;
+using RabbitMQ.Examples;
+using System;
 using System.Threading.Tasks;
-using ConsoleApplication1.StandardQueue;
 
 namespace ConsoleApplication1
 {
@@ -11,7 +9,10 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            MainStandardQueue.Run();
+            //MainStandardQueue.Run();
+            //ProducerProgram.Run();
+
+            ConsumerProgram.RunInParallel();
         }
     }
 }
