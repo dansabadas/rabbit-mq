@@ -1,0 +1,77 @@
+C:\Dan\work\github\rabbit-mq\Payments API\obj\Debug\Payments API.csprojResolveAssemblyReference.cache
+C:\Dan\work\github\rabbit-mq\Payments API\bin\ApplicationInsights.config
+C:\Dan\work\github\rabbit-mq\Payments API\bin\roslyn\csc.exe
+C:\Dan\work\github\rabbit-mq\Payments API\bin\roslyn\csc.exe.config
+C:\Dan\work\github\rabbit-mq\Payments API\bin\roslyn\csc.rsp
+C:\Dan\work\github\rabbit-mq\Payments API\bin\roslyn\csi.exe
+C:\Dan\work\github\rabbit-mq\Payments API\bin\roslyn\csi.rsp
+C:\Dan\work\github\rabbit-mq\Payments API\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Dan\work\github\rabbit-mq\Payments API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Dan\work\github\rabbit-mq\Payments API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Dan\work\github\rabbit-mq\Payments API\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Dan\work\github\rabbit-mq\Payments API\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Dan\work\github\rabbit-mq\Payments API\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Dan\work\github\rabbit-mq\Payments API\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Dan\work\github\rabbit-mq\Payments API\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Dan\work\github\rabbit-mq\Payments API\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Dan\work\github\rabbit-mq\Payments API\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Dan\work\github\rabbit-mq\Payments API\bin\roslyn\System.AppContext.dll
+C:\Dan\work\github\rabbit-mq\Payments API\bin\roslyn\System.Collections.Immutable.dll
+C:\Dan\work\github\rabbit-mq\Payments API\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Dan\work\github\rabbit-mq\Payments API\bin\roslyn\System.IO.FileSystem.dll
+C:\Dan\work\github\rabbit-mq\Payments API\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Dan\work\github\rabbit-mq\Payments API\bin\roslyn\System.Reflection.Metadata.dll
+C:\Dan\work\github\rabbit-mq\Payments API\bin\roslyn\vbc.exe
+C:\Dan\work\github\rabbit-mq\Payments API\bin\roslyn\vbc.exe.config
+C:\Dan\work\github\rabbit-mq\Payments API\bin\roslyn\vbc.rsp
+C:\Dan\work\github\rabbit-mq\Payments API\bin\roslyn\VBCSCompiler.exe
+C:\Dan\work\github\rabbit-mq\Payments API\bin\roslyn\VBCSCompiler.exe.config
+C:\Dan\work\github\rabbit-mq\Payments API\bin\Payments API.dll.config
+C:\Dan\work\github\rabbit-mq\Payments API\bin\Payments API.dll
+C:\Dan\work\github\rabbit-mq\Payments API\bin\Payments API.pdb
+C:\Dan\work\github\rabbit-mq\Payments API\bin\Antlr3.Runtime.dll
+C:\Dan\work\github\rabbit-mq\Payments API\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Dan\work\github\rabbit-mq\Payments API\bin\Microsoft.AI.DependencyCollector.dll
+C:\Dan\work\github\rabbit-mq\Payments API\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Dan\work\github\rabbit-mq\Payments API\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Dan\work\github\rabbit-mq\Payments API\bin\Microsoft.AI.Web.dll
+C:\Dan\work\github\rabbit-mq\Payments API\bin\Microsoft.AI.WindowsServer.dll
+C:\Dan\work\github\rabbit-mq\Payments API\bin\Microsoft.ApplicationInsights.dll
+C:\Dan\work\github\rabbit-mq\Payments API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Dan\work\github\rabbit-mq\Payments API\bin\Microsoft.Web.Infrastructure.dll
+C:\Dan\work\github\rabbit-mq\Payments API\bin\Newtonsoft.Json.dll
+C:\Dan\work\github\rabbit-mq\Payments API\bin\System.Net.Http.Formatting.dll
+C:\Dan\work\github\rabbit-mq\Payments API\bin\System.Web.Helpers.dll
+C:\Dan\work\github\rabbit-mq\Payments API\bin\System.Web.Http.dll
+C:\Dan\work\github\rabbit-mq\Payments API\bin\System.Web.Http.WebHost.dll
+C:\Dan\work\github\rabbit-mq\Payments API\bin\System.Web.Mvc.dll
+C:\Dan\work\github\rabbit-mq\Payments API\bin\System.Web.Optimization.dll
+C:\Dan\work\github\rabbit-mq\Payments API\bin\System.Web.Razor.dll
+C:\Dan\work\github\rabbit-mq\Payments API\bin\System.Web.WebPages.Deployment.dll
+C:\Dan\work\github\rabbit-mq\Payments API\bin\System.Web.WebPages.dll
+C:\Dan\work\github\rabbit-mq\Payments API\bin\System.Web.WebPages.Razor.dll
+C:\Dan\work\github\rabbit-mq\Payments API\bin\WebGrease.dll
+C:\Dan\work\github\rabbit-mq\Payments API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Dan\work\github\rabbit-mq\Payments API\bin\Newtonsoft.Json.xml
+C:\Dan\work\github\rabbit-mq\Payments API\bin\System.Net.Http.Formatting.xml
+C:\Dan\work\github\rabbit-mq\Payments API\bin\System.Web.Helpers.xml
+C:\Dan\work\github\rabbit-mq\Payments API\bin\System.Web.Http.xml
+C:\Dan\work\github\rabbit-mq\Payments API\bin\System.Web.Http.WebHost.xml
+C:\Dan\work\github\rabbit-mq\Payments API\bin\System.Web.Mvc.xml
+C:\Dan\work\github\rabbit-mq\Payments API\bin\System.Web.Optimization.xml
+C:\Dan\work\github\rabbit-mq\Payments API\bin\System.Web.Razor.xml
+C:\Dan\work\github\rabbit-mq\Payments API\bin\System.Web.WebPages.xml
+C:\Dan\work\github\rabbit-mq\Payments API\bin\System.Web.WebPages.Deployment.xml
+C:\Dan\work\github\rabbit-mq\Payments API\bin\System.Web.WebPages.Razor.xml
+C:\Dan\work\github\rabbit-mq\Payments API\bin\Antlr3.Runtime.pdb
+C:\Dan\work\github\rabbit-mq\Payments API\bin\Microsoft.ApplicationInsights.xml
+C:\Dan\work\github\rabbit-mq\Payments API\bin\Microsoft.AI.DependencyCollector.xml
+C:\Dan\work\github\rabbit-mq\Payments API\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Dan\work\github\rabbit-mq\Payments API\bin\Microsoft.AI.WindowsServer.xml
+C:\Dan\work\github\rabbit-mq\Payments API\bin\Microsoft.AI.Web.xml
+C:\Dan\work\github\rabbit-mq\Payments API\obj\Debug\Payments API.dll
+C:\Dan\work\github\rabbit-mq\Payments API\obj\Debug\Payments API.pdb
+C:\Dan\work\github\rabbit-mq\Payments API\bin\RabbitMQ.Core.dll
+C:\Dan\work\github\rabbit-mq\Payments API\bin\RabbitMQ.Client.dll
+C:\Dan\work\github\rabbit-mq\Payments API\bin\RabbitMQ.Core.pdb
+C:\Dan\work\github\rabbit-mq\Payments API\bin\RabbitMQ.Client.xml
