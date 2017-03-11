@@ -50,8 +50,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Consumers\AccountsAudit.cs" />
-    <Compile Include="Consumers\RabbitMQConsumer.cs" />
+    <Compile Include="Consumers\AccountsAuditConsumer.cs" />
+    <Compile Include="Consumers\PaymentConsumer.cs" />
+    <Compile Include="Consumers\RabbitMQConsumerPayment.cs" />
+    <Compile Include="Consumers\RabbitMQConsumerAudit.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PublishSubscribe\Subscriber.cs" />

@@ -7,6 +7,11 @@ namespace RabbitMQ.Core
 {
   public class RabbitMQConnectionFactory
   {
+    public RabbitMQConnectionFactory()
+    {
+      CreateConnection();
+    }
+
     public static ConnectionFactory GetFactory(bool isRemote)
     {
       return isRemote
@@ -48,13 +53,33 @@ namespace RabbitMQ.Core
 
       _model.QueueBind(CardPaymentQueueName, ExchangeName, "payment.card");
       _model.QueueBind(PurchaseOrderQueueName, ExchangeName, "payment.purchaseorder");
-
       _model.QueueBind(AllQueueName, ExchangeName, "payment.*");
     }
 
     public void StaticConnectionClose()
     {
       _connection.Close();
+    }
+
+    public void SendPayment(Payment payment)
+    {
+      SendMessage(payment.Serialize(), "payment.card");
+      Console.WriteLine(" Payment Sent {0}, £{1}", payment.CardNumber,
+          payment.AmountToPay);
+    }
+
+    public void SendPurchaseOrder(PurchaseOrder purchaseOrder)
+    {
+      SendMessage(purchaseOrder.Serialize(), "payment.purchaseorder");
+
+      Console.WriteLine(" Purchase Order Sent {0}, £{1}, {2}, {3}",
+          purchaseOrder.CompanyName, purchaseOrder.AmountToPay,
+          purchaseOrder.PaymentDayTerms, purchaseOrder.PoNumber);
+    }
+
+    public void SendMessage(byte[] message, string routingKey)
+    {
+      _model.BasicPublish(ExchangeName, routingKey, null, message);
     }
 
     private IConnection _instanceConnection;
