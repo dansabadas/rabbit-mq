@@ -1,6 +1,9 @@
 ﻿using RabbitMQ.Client;
+using RabbitMQ.Examples;
+using System;
+using System.Text;
 
-namespace ConsoleApplication1.Common
+namespace RabbitMQ.Core
 {
   public class RabbitMQConnectionFactory
   {
@@ -49,7 +52,7 @@ namespace ConsoleApplication1.Common
       _model.QueueBind(AllQueueName, ExchangeName, "payment.*");
     }
 
-    public void Close()
+    public void StaticConnectionClose()
     {
       _connection.Close();
     }
@@ -59,11 +62,11 @@ namespace ConsoleApplication1.Common
     private string _replyQueueName;
     private QueueingBasicConsumer _consumer;
 
-    public void CreateInstanceConnection()
+    public void CreateInstanceConnection() 
     {
-      var factory = new ConnectionFactory { HostName = "localhost", UserName = "guest", Password = "guest" };
+      var factory = GetFactory(isRemote: true);
       _instanceConnection = factory.CreateConnection();
-      _channel = _connection.CreateModel();
+      _channel = _instanceConnection.CreateModel();
 
       _replyQueueName = _channel.QueueDeclare("rpc_reply", true, false, false, null);
 
@@ -74,6 +77,26 @@ namespace ConsoleApplication1.Common
     public void InstanceConnectionClose()
     {
       _instanceConnection.Close();
+    }
+
+    public string MakePayment(Payment payment)
+    {
+      var corrId = Guid.NewGuid().ToString();
+      var props = _channel.CreateBasicProperties();
+      props.ReplyTo = _replyQueueName;
+      props.CorrelationId = corrId;
+
+      _channel.BasicPublish("", "rpc_queue", props, payment.Serialize());
+
+      while (true)
+      {
+        var ea = _consumer.Queue.Dequeue();
+
+        if (ea.BasicProperties.CorrelationId != corrId) continue;
+
+        var authCode = Encoding.UTF8.GetString(ea.Body);
+        return authCode;
+      }
     }
   }
 }

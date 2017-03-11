@@ -1,6 +1,6 @@
 ﻿using System;
 using RabbitMQ.Client;
-using ConsoleApplication1.Common;
+using RabbitMQ.Core;
 
 namespace RabbitMQ.Examples
 {

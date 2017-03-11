@@ -2,6 +2,7 @@
 using System.Net;
 using System.Web.Http;
 using RabbitMQ.Examples;
+using RabbitMQ.Core;
 
 namespace Payments.Controllers
 {
@@ -14,13 +15,13 @@ namespace Payments.Controllers
 
         try
         {
-          //RabbitMQDirectClient client = new RabbitMQDirectClient();
-          //client.CreateConnection();
-          //reply = client.MakePayment(payment);
+          RabbitMQConnectionFactory client = new RabbitMQConnectionFactory();
+          client.CreateInstanceConnection();
+          reply = client.MakePayment(payment);
 
-          //client.Close();
-        }
-        catch (Exception)
+          client.InstanceConnectionClose();
+      }
+      catch (Exception ex)
         {
           return StatusCode(HttpStatusCode.BadRequest);
         }

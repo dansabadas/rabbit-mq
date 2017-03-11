@@ -1,8 +1,7 @@
 ﻿using System;
 using RabbitMQ.Client;
-using RabbitMQ.Client.Events;
 using RabbitMQ.Examples;
-using ConsoleApplication1.Common;
+using RabbitMQ.Core;
 
 namespace ConsoleApplication1.StandardQueue
 {
