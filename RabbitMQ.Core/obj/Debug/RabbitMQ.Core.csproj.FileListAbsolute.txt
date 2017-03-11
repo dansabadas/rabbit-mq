@@ -1,0 +1,8 @@
+C:\Dan\work\github\rabbit-mq\RabbitMQ.Core\bin\Debug\RabbitMQ.Core.dll
+C:\Dan\work\github\rabbit-mq\RabbitMQ.Core\bin\Debug\RabbitMQ.Core.pdb
+C:\Dan\work\github\rabbit-mq\RabbitMQ.Core\bin\Debug\Newtonsoft.Json.dll
+C:\Dan\work\github\rabbit-mq\RabbitMQ.Core\bin\Debug\RabbitMQ.Client.dll
+C:\Dan\work\github\rabbit-mq\RabbitMQ.Core\bin\Debug\Newtonsoft.Json.xml
+C:\Dan\work\github\rabbit-mq\RabbitMQ.Core\bin\Debug\RabbitMQ.Client.xml
+C:\Dan\work\github\rabbit-mq\RabbitMQ.Core\obj\Debug\RabbitMQ.Core.dll
+C:\Dan\work\github\rabbit-mq\RabbitMQ.Core\obj\Debug\RabbitMQ.Core.pdb
