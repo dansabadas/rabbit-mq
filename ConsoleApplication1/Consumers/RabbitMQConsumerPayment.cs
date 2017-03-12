@@ -5,7 +5,7 @@ using RabbitMQ.Client.MessagePatterns;
 using RabbitMQ.Examples;
 using RabbitMQ.Core;
 
-namespace PaymentCardConsumer.RabbitMQ
+namespace Consumers
 {
     public class RabbitMQConsumerPayment
     {

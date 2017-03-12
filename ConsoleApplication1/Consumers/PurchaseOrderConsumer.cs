@@ -1,6 +1,4 @@
-﻿using PurchaseOrderConsumer.RabbitMQ;
-
-namespace PurchaseOrderConsumer
+﻿namespace Consumers
 {
   public class PurchaseOrderConsumer
   {

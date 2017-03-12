@@ -5,7 +5,7 @@ using RabbitMQ.Client.MessagePatterns;
 using RabbitMQ.Examples;
 using RabbitMQ.Core;
 
-namespace AccountsAuditConsumer.RabbitMQ
+namespace Consumers
 {
   public class RabbitMQConsumerAudit
   {

@@ -6,7 +6,7 @@ using RabbitMQ.Client.Events;
 using RabbitMQ.Examples;
 using RabbitMQ.Core;
 
-namespace DirectPaymentCardConsumer.RabbitMQ
+namespace Consumers
 {
     public class RabbitMQConsumerRpcDirectPayment
   {

@@ -5,7 +5,7 @@ using RabbitMQ.Client.MessagePatterns;
 using RabbitMQ.Core;
 using RabbitMQ.Examples;
 
-namespace PurchaseOrderConsumer.RabbitMQ
+namespace Consumers
 {
     public class RabbitMQConsumerPurchaseOrder
   {

@@ -1,6 +1,4 @@
-﻿using DirectPaymentCardConsumer.RabbitMQ;
-
-namespace PaymentCardConsumer
+﻿namespace Consumers
 {
   public class DirectPaymentConsumer
   {

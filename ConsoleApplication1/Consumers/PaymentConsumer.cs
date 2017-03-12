@@ -1,6 +1,6 @@
-﻿using PaymentCardConsumer.RabbitMQ;
+﻿using System.Threading.Tasks;
 
-namespace PaymentCardConsumer
+namespace Consumers
 {
   public class PaymentConsumer
   {
@@ -9,6 +9,11 @@ namespace PaymentCardConsumer
       RabbitMQConsumerPayment client = new RabbitMQConsumerPayment();
       client.CreateConnection();
       client.ProcessMessages();
+    }
+
+    public static void RunInParallel()
+    {
+      Task.Run(() => Run());
     }
   }
 }

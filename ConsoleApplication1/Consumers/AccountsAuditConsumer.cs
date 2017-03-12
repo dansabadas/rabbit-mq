@@ -1,14 +1,19 @@
-﻿using AccountsAuditConsumer.RabbitMQ;
+﻿using System.Threading.Tasks;
 
-namespace AccountsAuditConsumer
+namespace Consumers
 {
   public class AccountsAuditConsumer
   {
-    static void Run()
+    public static void Run()
     {
       RabbitMQConsumerAudit client = new RabbitMQConsumerAudit();
       client.CreateConnection();
       client.ProcessMessages();
+    }
+
+    public static void RunInParallel()
+    {
+      Task.Run(() => Run());
     }
   }
 }
