@@ -18,8 +18,10 @@ namespace ConsoleApplication1
       //Subscriber.RunInParallel();
       //Publisher.Run();
 
-      PaymentConsumer.RunInParallel();
-      AccountsAuditConsumer.RunInParallel();
+      //PaymentConsumer.RunInParallel();
+      //AccountsAuditConsumer.RunInParallel();
+      DirectPaymentConsumer.Run();
+
       Console.ReadLine();
     }
   }
