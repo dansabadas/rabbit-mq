@@ -2,23 +2,23 @@
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 using RabbitMQ.Client.MessagePatterns;
-using RabbitMQ.Examples;
 using RabbitMQ.Core;
+using RabbitMQ.Examples;
 
-namespace PaymentCardConsumer.RabbitMQ
+namespace PurchaseOrderConsumer.RabbitMQ
 {
-    public class RabbitMQConsumerPayment
-    {
+    public class RabbitMQConsumerPurchaseOrder
+  {
         private static ConnectionFactory _factory;
-        private static IConnection _connection;
-        
+        private static IConnection _connection;        
+
         private const string ExchangeName = "Topic_Exchange";
-        private const string CardPaymentQueueName = "CardPaymentTopic_Queue";
+        private const string PurchaseOrderQueueName = "PurchaseOrderTopic_Queue";
 
         public void CreateConnection()
         {
             _factory = RabbitMQConnectionFactory.GetFactory(isRemote: true);
-    }
+        }
 
         public void Close()
         {
@@ -31,31 +31,25 @@ namespace PaymentCardConsumer.RabbitMQ
             {
                 using (var channel = _connection.CreateModel())
                 {
-                    Console.WriteLine("Listening for Topic <payment.cardpayment>");
-                    Console.WriteLine("-----------------------------------------");
+                    Console.WriteLine("Listening for Topic <payment.purchaseorder>");
+                    Console.WriteLine("------------------------------------------");
                     Console.WriteLine();
-
+                    
                     channel.ExchangeDeclare(ExchangeName, "topic");
-                    channel.QueueDeclare(CardPaymentQueueName, 
-                        true, false, false, null);
-
-                    channel.QueueBind(CardPaymentQueueName, ExchangeName, 
-                        "payment.cardpayment");
+                    channel.QueueDeclare(PurchaseOrderQueueName, true, false, false, null);
+                    channel.QueueBind(PurchaseOrderQueueName, ExchangeName, "payment.purchaseorder");
 
                     channel.BasicQos(0, 10, false);
-                    Subscription subscription = new Subscription(channel, 
-                        CardPaymentQueueName, false);
+                    Subscription subscription = new Subscription(channel, PurchaseOrderQueueName, false);
                     
                     while (true)
                     {
                         BasicDeliverEventArgs deliveryArguments = subscription.Next();
 
-                        var message = 
-                            (Payment)deliveryArguments.Body.DeSerialize(typeof(Payment));
-
+                        var message = (PurchaseOrder)deliveryArguments.Body.DeSerialize(typeof(PurchaseOrder));
                         var routingKey = deliveryArguments.RoutingKey;
 
-                        Console.WriteLine("--- Payment - Routing Key <{0}> : {1} : {2}", routingKey, message.CardNumber, message.AmountToPay);
+                        Console.WriteLine("-- Purchase Order - Routing Key <{0}> : {1}, £{2}, {3}, {4}", routingKey, message.CompanyName, message.AmountToPay, message.PaymentDayTerms, message.PoNumber);
                         subscription.Ack(deliveryArguments);
                     }
                 }

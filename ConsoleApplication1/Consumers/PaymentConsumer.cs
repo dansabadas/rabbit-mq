@@ -1,14 +1,14 @@
-﻿using DirectPaymentCardConsumer.RabbitMQ;
+﻿using PaymentCardConsumer.RabbitMQ;
 
 namespace PaymentCardConsumer
 {
-    public class PaymentConsumer
+  public class PaymentConsumer
   {
-        public static void Run()
-        {
+    public static void Run()
+    {
       RabbitMQConsumerPayment client = new RabbitMQConsumerPayment();
-            client.CreateConnection();
-            client.ProcessMessages();            
-        }
+      client.CreateConnection();
+      client.ProcessMessages();
     }
+  }
 }

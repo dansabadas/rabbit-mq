@@ -51,8 +51,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Consumers\AccountsAuditConsumer.cs" />
+    <Compile Include="Consumers\DirectPaymentConsumer.cs" />
     <Compile Include="Consumers\PaymentConsumer.cs" />
+    <Compile Include="Consumers\PurchaseOrderConsumer.cs" />
+    <Compile Include="Consumers\RabbitMQConsumerPurchaseOrder.cs" />
     <Compile Include="Consumers\RabbitMQConsumerPayment.cs" />
+    <Compile Include="Consumers\RabbitMQConsumerRpcDirectPayment.cs" />
     <Compile Include="Consumers\RabbitMQConsumerAudit.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
